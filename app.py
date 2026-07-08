@@ -14,8 +14,7 @@ api_key = st.secrets.get("OPENAI_API_KEY") or os.getenv("OPENAI_API_KEY")
 client = OpenAI(api_key=api_key)
 
 # Sayfa başlığı ve tasarımı
-st.set_page_config(page_title="Sipariş Ekranına Hoşgeldin
-🤗", page_icon="🍕", layout="centered")
+st.set_page_config(page_title="Sipariş Ekranına Hoşgeldin🤗", page_icon="🍕", layout="centered")
 st.title("🍕 Sipariş Vermek İçin Benimle İletişim Kurabilirsin")
 st.write("---")
 
