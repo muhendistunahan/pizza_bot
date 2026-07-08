@@ -76,7 +76,7 @@ if prompt := st.chat_input("Mesajınızı buraya yazın..."):
             response = client.chat.completions.create(
                 model="gpt-4o-mini",
                 messages=st.session_state.messages,
-                temperature=5
+                temperature=1
             )
             answer = response.choices[0].message.content
             st.write(answer)
