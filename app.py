@@ -4,7 +4,7 @@ import openai
 from openai import OpenAI
 from dotenv import load_dotenv, find_dotenv
 import panel as pn
-from IPython.display import display, HTML
+
 
 # =====================================================================
 # 1. ORTAM DEĞİŞKENLERİ VE API AYARLARI
