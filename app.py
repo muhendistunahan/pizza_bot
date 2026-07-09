@@ -4,9 +4,8 @@ from openai import OpenAI
 from dotenv import load_dotenv, find_dotenv
 import streamlit as st
 
-# =====================================================================
 # 1. ORTAM DEĞİŞKENLERİ VE API AYARLARI
-# =====================================================================
+
 _ = load_dotenv(find_dotenv(), override=True)
 
 # Streamlit Cloud üzerindeki Secrets'tan veya yerelden API anahtarını alır
@@ -18,9 +17,8 @@ st.set_page_config(page_title="Sipariş Ekranına Hoşgeldin🤗", page_icon="�
 st.title("🍕 Sipariş Vermek İçin Benimle İletişim Kurabilirsin")
 st.write("---")
 
-# =====================================================================
+
 # 2. BOT HAFIZASI VE SİSTEM TALİMATLARI (CONTEXT)
-# =====================================================================
 if "messages" not in st.session_state:
     st.session_state.messages = [
         {'role': 'system', 'content': """
@@ -54,9 +52,9 @@ Sprite: 3.00 (Büyük), 2.00 (Orta), 1.00 (Küçük)
 """}
     ]
 
-# =====================================================================
+
 # 3. CHAT EKRANI GÖSTERİMİ
-# =====================================================================
+
 # Hafızadaki eski mesajları ekrana bas (Sistem mesajı hariç)
 for msg in st.session_state.messages:
     if msg['role'] != 'system':
